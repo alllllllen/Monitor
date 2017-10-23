@@ -10,6 +10,4 @@
 #define ObjCBridge_h
 #import <EstimoteSDK/EstimoteSDK.h>
 #import "UIViewController+Alerts.h"
-
-
 #endif /* ObjCBridge_h */

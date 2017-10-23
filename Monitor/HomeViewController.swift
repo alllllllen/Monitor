@@ -9,12 +9,14 @@
 import UIKit
 import Firebase
 import GoogleSignIn
+import FBSDKLoginKit
 
 class HomeViewController: UIViewController, GIDSignInUIDelegate {
     
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var userimg: UIImageView!
     @IBOutlet weak var homeDescribe: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -32,7 +34,7 @@ class HomeViewController: UIViewController, GIDSignInUIDelegate {
             struct last {
                 static var photoURL: URL? = nil
             }
-            last.photoURL = photoURL;  // to prevent earlier image overwrites later one.
+            last.photoURL = photoURL;
             if let photoURL = photoURL {
                 DispatchQueue.global(qos: .default).async {
                     let data = try? Data.init(contentsOf: photoURL)
@@ -47,21 +49,18 @@ class HomeViewController: UIViewController, GIDSignInUIDelegate {
                 }
             }
             else {
-                self.userimg.image = UIImage.init(named: "avatar")
+                self.userimg.image = UIImage.init(named: "user.jpg")
             }
-            
         }
-        else {
-            self.performSegue(withIdentifier: "unlogin", sender: nil)
-        }
-        
     }
     
     @IBAction func didTapSignOut(_ sender: Any) {
+        GIDSignIn.sharedInstance().signOut()
+        let fbLogOut = FBSDKLoginManager()
+        fbLogOut.logOut()
         let firebaseAuth = Auth.auth()
         do {
             try firebaseAuth.signOut()
-            GIDSignIn.sharedInstance().signOut()
             let alertController = UIAlertController(title: "登出資訊", message: "登出成功", preferredStyle: .alert)
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: {(UIAlertAction) in
                 self.performSegue(withIdentifier: "didlogout", sender: nil)
