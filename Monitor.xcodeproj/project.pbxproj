@@ -10,11 +10,11 @@
 		9F6E6E1F1F8CC6EF00E389D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F6E6E1D1F8CC6EF00E389D9 /* Main.storyboard */; };
 		9F81655B1F975A42009E682F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F81655A1F975A42009E682F /* HomeViewController.swift */; };
 		9F81655D1F9843FE009E682F /* MainLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F81655C1F9843FE009E682F /* MainLogInViewController.swift */; };
+		9FA4F6E71FA9C2510058CE61 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9FA4F6E61FA9C2510058CE61 /* GoogleService-Info.plist */; };
 		9FC10EA51F7904AD00B4C566 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC10EA41F7904AD00B4C566 /* AppDelegate.swift */; };
 		9FC10EAF1F7904AD00B4C566 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FC10EAD1F7904AD00B4C566 /* LaunchScreen.storyboard */; };
 		9FC10EBA1F7904AE00B4C566 /* MonitorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC10EB91F7904AE00B4C566 /* MonitorTests.swift */; };
 		9FC10EC51F7904AE00B4C566 /* MonitorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC10EC41F7904AE00B4C566 /* MonitorUITests.swift */; };
-		9FC10ED41F7959E900B4C566 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9FC10ED31F7959E900B4C566 /* GoogleService-Info.plist */; };
 		9FCB94101F94E7150086432E /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCB940F1F94E7150086432E /* EmailViewController.swift */; };
 		9FCC3AE41F9E0D8C006999B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC3AE31F9E0D8C006999B3 /* Assets.xcassets */; };
 		C9DCDD0B5E5D70D89B03CDE0 /* Pods_Monitor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A8AC87E828DFFC9082B7404 /* Pods_Monitor.framework */; };
@@ -43,6 +43,7 @@
 		9F6E6E1E1F8CC6EF00E389D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F81655A1F975A42009E682F /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9F81655C1F9843FE009E682F /* MainLogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainLogInViewController.swift; sourceTree = "<group>"; };
+		9FA4F6E61FA9C2510058CE61 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9FC10EA11F7904AC00B4C566 /* Monitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Monitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FC10EA41F7904AD00B4C566 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FC10EAE1F7904AD00B4C566 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,7 +55,6 @@
 		9FC10EC41F7904AE00B4C566 /* MonitorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorUITests.swift; sourceTree = "<group>"; };
 		9FC10EC61F7904AE00B4C566 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FC10ED21F79073C00B4C566 /* ObjCBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCBridge.h; sourceTree = "<group>"; };
-		9FC10ED31F7959E900B4C566 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9FCB940F1F94E7150086432E /* EmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		9FCC3AE31F9E0D8C006999B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9A5D22D0CFC6FF23ECAA78C /* Pods_MonitorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MonitorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,7 +141,7 @@
 				9FCC3AE31F9E0D8C006999B3 /* Assets.xcassets */,
 				9FC10EAD1F7904AD00B4C566 /* LaunchScreen.storyboard */,
 				9FC10EB01F7904AE00B4C566 /* Info.plist */,
-				9FC10ED31F7959E900B4C566 /* GoogleService-Info.plist */,
+				9FA4F6E61FA9C2510058CE61 /* GoogleService-Info.plist */,
 			);
 			path = Monitor;
 			sourceTree = "<group>";
@@ -235,7 +235,7 @@
 				TargetAttributes = {
 					9FC10EA01F7904AC00B4C566 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = FPML88AQ58;
+						DevelopmentTeam = SPE48VCVKY;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -304,7 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FC10EAF1F7904AD00B4C566 /* LaunchScreen.storyboard in Resources */,
-				9FC10ED41F7959E900B4C566 /* GoogleService-Info.plist in Resources */,
+				9FA4F6E71FA9C2510058CE61 /* GoogleService-Info.plist in Resources */,
 				9F6E6E1F1F8CC6EF00E389D9 /* Main.storyboard in Resources */,
 				9FCC3AE41F9E0D8C006999B3 /* Assets.xcassets in Resources */,
 			);
@@ -388,42 +388,6 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Monitor/Pods-Monitor-resources.sh",
-				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/avatar.png",
-				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/avatar@2x.png",
-				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/avatar@3x.png",
-				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/avatar_noarrow.png",
-				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/avatar_noarrow@2x.png",
-				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/avatar_noarrow@3x.png",
-				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconBeetrootSmall.png",
-				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconBeetrootSmall@2x.png",
-				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconBeetrootSmall@3x.png",
-				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconBlackSmall.png",
-				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconBlackSmall@2x.png",
-				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconBlackSmall@3x.png",
-				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconBlueberrySmall.png",
-				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconBlueberrySmall@2x.png",
-				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconBlueberrySmall@3x.png",
-				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconCandySmall.png",
-				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconCandySmall@2x.png",
-				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconCandySmall@3x.png",
-				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconGreySmall.png",
-				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconGreySmall@2x.png",
-				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconGreySmall@3x.png",
-				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconIcySmall.png",
-				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconIcySmall@2x.png",
-				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconIcySmall@3x.png",
-				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconLemonSmall.png",
-				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconLemonSmall@2x.png",
-				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconLemonSmall@3x.png",
-				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconMintSmall.png",
-				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconMintSmall@2x.png",
-				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconMintSmall@3x.png",
-				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconTransparentSmall.png",
-				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconTransparentSmall@2x.png",
-				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconTransparentSmall@3x.png",
-				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconWhiteSmall.png",
-				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconWhiteSmall@2x.png",
-				"${PODS_ROOT}/EstimoteIndoorSDK/EstimoteIndoorLocationSDK/Resources/beaconWhiteSmall@3x.png",
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -614,7 +578,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
-				DEVELOPMENT_TEAM = FPML88AQ58;
+				DEVELOPMENT_TEAM = SPE48VCVKY;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/EstimoteSDK/EstimoteSDK\"",
@@ -649,7 +613,7 @@
 				INFOPLIST_FILE = Monitor/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = sslab.Monitor;
+				PRODUCT_BUNDLE_IDENTIFIER = sslab302.Monitor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_NAME}/ObjCBridge.h";
 				SWIFT_VERSION = 4.0;
@@ -664,7 +628,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
-				DEVELOPMENT_TEAM = FPML88AQ58;
+				DEVELOPMENT_TEAM = SPE48VCVKY;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/EstimoteSDK/EstimoteSDK\"",
@@ -699,7 +663,7 @@
 				INFOPLIST_FILE = Monitor/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = sslab.Monitor;
+				PRODUCT_BUNDLE_IDENTIFIER = sslab302.Monitor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_NAME}/ObjCBridge.h";
 				SWIFT_VERSION = 4.0;

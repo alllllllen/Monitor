@@ -19,17 +19,17 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb153756685172116</string>
+			</array>
+		</dict>
+		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.595361514123-rktorog55igdef4hr8mk1dbl4qdd4jhn</string>
-			</array>
-		</dict>
-		<dict>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>fb153756685172116</string>
+				<string>com.googleusercontent.apps.595361514123-i0hgsme47tqu5ifmecpnnffhjkvnuvre</string>
 			</array>
 		</dict>
 	</array>
@@ -49,11 +49,11 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>We use low-energy Bluetooth and iBeacon devices installed at the cafe shop to find you inside the shop, and provide relevant information.</string>
+	<string>We&apos;ll show you cool things near you in the app. With the &quot;always&quot; option, we can also alert you via notifications if you don&apos;t have the app open.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>We use low-energy Bluetooth and iBeacon devices installed at the cafe shop to find you inside the shop, and provide relevant information.</string>
+	<string>We&apos;ll show you cool things near you in the app, and alert you via notifications if you don&apos;t have the app open.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>We use low-energy Bluetooth and iBeacon devices installed at the cafe shop to find you inside the shop, and provide relevant information.</string>
+	<string>We&apos;ll show you cool things near you in the app.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>bluetooth-central</string>

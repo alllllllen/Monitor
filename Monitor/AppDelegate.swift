@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  Monitor
-//
-//  Created by Allen on 2017/9/25.
-//  Copyright © 2017年 Allen. All rights reserved.
-//
-
 import UIKit
 import Firebase
 import GoogleSignIn
@@ -14,10 +6,10 @@ import FBSDKCoreKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate, GIDSignInDelegate, UNUserNotificationCenterDelegate {
-
+    
     var window: UIWindow?
-    @objc let beaconManager = ESTBeaconManager()
-    @objc var ref: DatabaseReference!
+    let beaconManager = ESTBeaconManager()
+    var ref: DatabaseReference!
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
@@ -25,8 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate,
         GIDSignIn.sharedInstance().delegate = self
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         self.beaconManager.delegate = self
-        self.ref = Database.database().reference()
         self.beaconManager.requestAlwaysAuthorization()
+        self.ref = Database.database().reference()
         if Auth.auth().currentUser != nil {
             self.window?.rootViewController?.performSegue(withIdentifier: "login", sender: nil)
         }
@@ -39,16 +31,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate,
             UNUserNotificationCenter.current().requestAuthorization(options: authOptions, completionHandler: {_, _ in })
             application.registerForRemoteNotifications()
         }
-        self.beaconManager.startMonitoring(for: CLBeaconRegion(proximityUUID: UUID(uuidString: "D0D3FA86-CA76-45EC-9BD9-6AF4F6B19140")!, major: 58531, minor: 3, identifier: "Table3"))
-        self.beaconManager.startMonitoring(for: CLBeaconRegion(proximityUUID: UUID(uuidString: "D0D3FA86-CA76-45EC-9BD9-6AF4F6B19140")!, major: 58531, minor: 2, identifier: "Table2"))
-        self.beaconManager.startMonitoring(for: CLBeaconRegion(proximityUUID: UUID(uuidString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!, major: 5582, minor: 1, identifier: "Table1(Location Beacon)"))
+//        self.beaconManager.stopMonitoringForAllRegions()
+
+        
+        self.beaconManager.startMonitoring(for: CLBeaconRegion(proximityUUID: UUID(uuidString: "D0D3FA86-CA76-45EC-9BD9-6AF4F6B19149")!, major: 1, minor: 4, identifier: "Table1"))
+        self.beaconManager.startMonitoring(for: CLBeaconRegion(proximityUUID: UUID(uuidString: "D0D3FA86-CA76-45EC-9BD9-6AF4F6B19149")!, major: 2, minor: 2, identifier: "Table2"))
+        self.beaconManager.startMonitoring(for: CLBeaconRegion(proximityUUID: UUID(uuidString: "D0D3FA86-CA76-45EC-9BD9-6AF4F6B19149")!, major: 3, minor: 2, identifier: "Table3"))
+
+        self.beaconManager.startMonitoring(for: CLBeaconRegion(proximityUUID: UUID(uuidString: "D0D3FA86-CA76-45EC-9BD9-6AF4F6B19149")!, major: 4, minor: 2, identifier: "Table4"))
+        self.beaconManager.startMonitoring(for: CLBeaconRegion(proximityUUID: UUID(uuidString: "D0D3FA86-CA76-45EC-9BD9-6AF4F6B19149")!, major: 5, minor: 2, identifier: "Table5"))
+        self.beaconManager.startMonitoring(for: CLBeaconRegion(proximityUUID: UUID(uuidString: "D0D3FA86-CA76-45EC-9BD9-6AF4F6B19149")!, major: 6, minor: 2, identifier: "Table6"))
+        self.beaconManager.startMonitoring(for: CLBeaconRegion(proximityUUID: UUID(uuidString: "D0D3FA86-CA76-45EC-9BD9-6AF4F6B19149")!, major: 7, minor: 2, identifier: "Table7"))
+
+        self.beaconManager.startMonitoring(for: CLBeaconRegion(proximityUUID: UUID(uuidString: "D0D3FA86-CA76-45EC-9BD9-6AF4F6B19149")!, major: 8, minor: 2, identifier: "Table8"))
+        self.beaconManager.startMonitoring(for: CLBeaconRegion(proximityUUID: UUID(uuidString: "D0D3FA86-CA76-45EC-9BD9-6AF4F6B19149")!, major: 9, minor: 2, identifier: "Table9"))
+
+        self.beaconManager.startMonitoring(for: CLBeaconRegion(proximityUUID: UUID(uuidString: "D0D3FA86-CA76-45EC-9BD9-6AF4F6B19149")!, major: 10, minor: 2, identifier: "Table10"))
+        self.beaconManager.startMonitoring(for: CLBeaconRegion(proximityUUID: UUID(uuidString: "D0D3FA86-CA76-45EC-9BD9-6AF4F6B19149")!, major: 11, minor: 2, identifier: "Table11"))
+        self.beaconManager.startMonitoring(for: CLBeaconRegion(proximityUUID: UUID(uuidString: "D0D3FA86-CA76-45EC-9BD9-6AF4F6B19149")!, major: 12, minor: 2, identifier: "Table12"))
+        self.beaconManager.startMonitoring(for: CLBeaconRegion(proximityUUID: UUID(uuidString: "D0D3FA86-CA76-45EC-9BD9-6AF4F6B19149")!, major: 13, minor: 2, identifier: "Table13"))
+        self.beaconManager.startMonitoring(for: CLBeaconRegion(proximityUUID: UUID(uuidString: "D0D3FA86-CA76-45EC-9BD9-6AF4F6B19149")!, major: 14, minor: 2, identifier: "Table14"))
+        print(self.beaconManager.monitoredRegions)
+
         UIApplication.shared.registerUserNotificationSettings(UIUserNotificationSettings(types: .alert, categories: nil))
         return true
     }
     
     func beaconManager(_ manager: Any, didEnter region: CLBeaconRegion) {
-        self.ref.child("/table/\(region.minor!)/taken").setValue(1)
+        self.ref.child("/table/\(region.major!)/taken").setValue(1)
         if let user = Auth.auth().currentUser {
+            self.ref.child("/users/\(user.uid)/table").setValue("\(region.identifier)")
             let notification = UILocalNotification()
             notification.alertBody =
             "歡迎光臨,\(user.displayName!)先生/小姐\n您正坐在\(region.identifier)"
@@ -61,10 +73,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate,
             UIApplication.shared.presentLocalNotificationNow(notification)
         }
     }
-
+    
     func beaconManager(_ manager: Any, didExitRegion region: CLBeaconRegion) {
-        self.ref.child("/table/\(region.minor!)/taken").setValue(0)
+        self.ref.child("/table/\(region.major!)/taken").setValue(0)
         if let user = Auth.auth().currentUser {
+            self.ref.child("/users/\(user.uid)/table").setValue("null")
             let notification = UILocalNotification()
             notification.alertBody =
             "Goodbye,\(user.displayName!)先生/小姐\n期待您的再次光臨"
@@ -83,7 +96,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate,
         -> Bool {
             return self.application(application, open: url, sourceApplication:options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String, annotation: [:])
     }
-
+    
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
         if GIDSignIn.sharedInstance().handle(url, sourceApplication: sourceApplication, annotation: annotation) {
             return true
@@ -115,4 +128,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate,
     }
     
 }
-

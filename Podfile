@@ -4,7 +4,6 @@
 target 'Monitor' do
   use_frameworks!
   pod "EstimoteSDK"
-  pod "EstimoteIndoorSDK"
   pod "Firebase/Core"
   pod "Firebase/Database"
   pod "Firebase/Auth"
