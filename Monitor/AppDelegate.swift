@@ -58,67 +58,51 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate,
     }
     
     func beaconManager(_ manager: Any, didEnter region: CLBeaconRegion) {
-        switch (region.major as! NSInteger){
-        case 1:
-            self.ref.child("/table/\(region.major!)").observeSingleEvent(of: .value, with: { (datasnap) in
-                let value = datasnap.value as? NSDictionary
-                var number = value?["taken"] as! NSInteger
-                if (number+1) <= (region.minor as! NSInteger) {
-                    number = number+1
-                    self.ref.child("/table/\(region.major!)/taken").setValue(number)
+        self.ref.child("/table/\(region.major!)").observeSingleEvent(of: .value, with: { (datasnap) in
+            let value = datasnap.value as? NSDictionary
+            var number = value?["taken"] as! NSInteger
+            if (number+1) <= (region.minor as! NSInteger) {
+                number = number+1
+                self.ref.child("/table/\(region.major!)/taken").setValue(number)
+                if let user = Auth.auth().currentUser {
+                    self.ref.child("/users/\(user.uid)/table").setValue("\(region.identifier)")
+                    let notification = UILocalNotification()
+                    notification.alertBody =
+                    "歡迎光臨,\(user.displayName!)先生/小姐\n您正坐在\(region.identifier)"
+                    UIApplication.shared.presentLocalNotificationNow(notification)
                 }
-                else{
-
+                else {
+                    let notification = UILocalNotification()
+                    notification.alertBody =
+                    "歡迎光臨,您正坐在\(region.identifier)"
+                    UIApplication.shared.presentLocalNotificationNow(notification)
                 }
-            })
-        default:
-            print("14")
-        }
-        if let user = Auth.auth().currentUser {
-            self.ref.child("/users/\(user.uid)/table").setValue("\(region.identifier)")
-            let notification = UILocalNotification()
-            notification.alertBody =
-            "歡迎光臨,\(user.displayName!)先生/小姐\n您正坐在\(region.identifier)"
-            UIApplication.shared.presentLocalNotificationNow(notification)
-        }
-        else {
-            let notification = UILocalNotification()
-            notification.alertBody =
-            "歡迎光臨,您正坐在\(region.identifier)"
-            UIApplication.shared.presentLocalNotificationNow(notification)
-        }
+            }
+        })
     }
     
     func beaconManager(_ manager: Any, didExitRegion region: CLBeaconRegion) {
-        switch (region.major as! NSInteger){
-        case 1:
-            self.ref.child("/table/\(region.major!)").observeSingleEvent(of: .value, with: { (datasnap) in
-                let value = datasnap.value as? NSDictionary
-                var number = value?["taken"] as! NSInteger
-                if (number-1) >= 0 {
-                    number = number-1
-                    self.ref.child("/table/\(region.major!)/taken").setValue(number)
+        self.ref.child("/table/\(region.major!)").observeSingleEvent(of: .value, with: { (datasnap) in
+            let value = datasnap.value as? NSDictionary
+            var number = value?["taken"] as! NSInteger
+            if (number-1) >= 0 {
+                number = number-1
+                self.ref.child("/table/\(region.major!)/taken").setValue(number)
+                if let user = Auth.auth().currentUser {
+                    self.ref.child("/users/\(user.uid)/table").setValue("null")
+                    let notification = UILocalNotification()
+                    notification.alertBody =
+                    "Goodbye,\(user.displayName!)先生/小姐\n期待您的再次光臨"
+                    UIApplication.shared.presentLocalNotificationNow(notification)
                 }
-                else{
-                    
+                else {
+                    let notification = UILocalNotification()
+                    notification.alertBody =
+                    "Goodbye,期待您的再次光臨"
+                    UIApplication.shared.presentLocalNotificationNow(notification)
                 }
-            })
-        default:
-            print("14")
-        }
-        if let user = Auth.auth().currentUser {
-            self.ref.child("/users/\(user.uid)/table").setValue("null")
-            let notification = UILocalNotification()
-            notification.alertBody =
-            "Goodbye,\(user.displayName!)先生/小姐\n期待您的再次光臨"
-            UIApplication.shared.presentLocalNotificationNow(notification)
-        }
-        else {
-            let notification = UILocalNotification()
-            notification.alertBody =
-            "Goodbye,期待您的再次光臨"
-            UIApplication.shared.presentLocalNotificationNow(notification)
-        }
+            }
+        })
     }
     
     @available(iOS 9.0, *)

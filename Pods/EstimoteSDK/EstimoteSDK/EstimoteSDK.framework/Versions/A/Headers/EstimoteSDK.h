@@ -7,7 +7,7 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 4.16.2
+//  Version: 4.26.1
 //  Copyright (c) 2016 Estimote. All rights reserved.
 
 /**
@@ -243,11 +243,13 @@
 #import "ESTSettingGPIOPortsData.h"
 #import "ESTSettingGPIOConfigPort0.h"
 #import "ESTSettingGPIOConfigPort1.h"
+#import "ESTSettingGPIO0StateReflectingOnLEDEnable.h"
 
 #import "ESTBeaconOperationGPIONotificationEnable.h"
 #import "ESTBeaconOperationGPIOPortsData.h"
 #import "ESTBeaconOperationGPIOConfigPort0.h"
 #import "ESTBeaconOperationGPIOConfigPort1.h"
+#import "ESTBeaconOperationGPIO0StateReflectingOnLEDEnable.h"
 
 /**
  *  Sensors
@@ -339,6 +341,7 @@
 
 #import "ESTRequestRegisterDevice.h"
 #import "ESTRequestGetPendingSettings.h"
+#import "ESTRequestV2DeletePendingSettings.h"
 #import "ESTRequestCancelPendingSettings.h"
 #import "ESTRequestGetSettingsHistory.h"
 
@@ -396,6 +399,7 @@
 #import "ESTRequestV3GetDeviceOwner.h"
 
 #import "ESTRequestGetDeviceDetails.h"
+#import "ESTRequestGetDevices.h"
 
 /**
  * Telemetry support
@@ -413,6 +417,7 @@
  * Monitoring
  */
 #import "ESTMonitoringManager.h"
+#import "ESTMonitoringV2Manager.h"
 
 /**
  *  Estimote Storage
@@ -429,3 +434,7 @@
  *  Estimote Mesh
  */
 #import "ESTMeshManager.h"
+#import "ESTMeshGateway.h"
+#import "ESTMeshNearablesScanReportVO.h"
+#import "ESTMeshNearablesScanResultVO.h"
+#import "ESTMeshScanReportsManager.h"

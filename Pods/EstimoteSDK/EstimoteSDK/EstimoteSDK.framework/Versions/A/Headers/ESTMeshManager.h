@@ -36,6 +36,18 @@ typedef NS_ENUM(NSInteger, ESTMeshManagerError) {
     
     /// Bluetooth is currently powered off.
     ESTMeshManagerBluetoothOff,
+    
+    /// Failed to trigger automapping command in Cloud.
+    ESTMeshManagerErrorAutomappingFailed,
+    
+    /// Failed to trigger asset tracking command in Cloud.
+    ESTMeshManagerErrorAssetTrackingFailed,
+    
+    /// Failed to trigger reading scan reports command in Cloud.
+    ESTMeshManagerErrorPrepareNearablesScanReportFailed,
+    
+    /// Failed to perform configuration of devices in mesh.
+    ESTMeshManagerErrorConfigurationFailed
 };
 
 /**
@@ -135,6 +147,45 @@ typedef NS_ENUM(NSInteger, ESTMeshManagerError) {
  *  Stops sending mesh settings confirmation requests to Estimote Cloud.
  */
 - (void)stopConfirmingMeshSettings;
+
+/**
+ Method triggering automapping commands in Cloud.
+ @warning Physical connection with any of meshed beacons is required.
+
+ @param networkIdentifier Identifier of Mesh network, that automapping will be triggered for.
+ @param completion Completion block with operation's error. Nil value means success.
+ */
+- (void)createAutomappingCommandForNetworkIdentifier:(uint32_t)networkIdentifier completion:(ESTCompletionBlock)completion;
+
+/**
+ Method allows to prepare pending settings for all beacons in the mesh network.
+
+ @param networkIdentifier Identifier of mesh network.
+ @param deviceSettings Group of settings that should be applied.
+ @param completion Completion block with operation's error. Nil value means success.
+ */
+- (void)configureNetwork:(uint32_t)networkIdentifier
+                settings:(ESTDeviceSettingsCollection *)deviceSettings
+              completion:(ESTCompletionBlock)completion;
+
+/**
+ Enables tracking nearables command in Cloud.
+ @warning Physical connection with any of meshed beacons is required.
+
+ @param networkIdentifier Identifier of Mesh network, that tracking nearables will be enabled for.
+ @param completion Completion block with operation's error. Nil value means success.
+ */
+- (void)enableAssetTrackingForNetworkIdentifier:(uint32_t)networkIdentifier completion:(ESTCompletionBlock)completion;
+
+/**
+ Triggers reading scan reports command in Cloud.
+ @warning Physical connection with any of meshed beacons is required. Also note that there is no use in reading reports if
+ `createAssetTrackingCommandForNetworkIdentifier:completion:` wasn't called in advance.
+
+ @param networkIdentifier Identifier of Mesh network, that reading scan reports will be triggered for.
+ @param completion Completion block with operation's error. Nil value means success.
+ */
+- (void)prepareNearablesScanReportCommandForNetworkIdentifier:(uint32_t)networkIdentifier completion:(ESTCompletionBlock)completion;
 
 @end
 
