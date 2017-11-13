@@ -10,4 +10,5 @@ target 'Monitor' do
   pod "GoogleSignIn"
   pod 'FacebookCore'
   pod 'FacebookLogin'
+  pod 'Bolts'
 end

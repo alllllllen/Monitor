@@ -51,7 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate,
         self.beaconManager.startMonitoring(for: CLBeaconRegion(proximityUUID: UUID(uuidString: "D0D3FA86-CA76-45EC-9BD9-6AF4F6B19149")!, major: 12, minor: 2, identifier: "Table12"))
         self.beaconManager.startMonitoring(for: CLBeaconRegion(proximityUUID: UUID(uuidString: "D0D3FA86-CA76-45EC-9BD9-6AF4F6B19149")!, major: 13, minor: 2, identifier: "Table13"))
         self.beaconManager.startMonitoring(for: CLBeaconRegion(proximityUUID: UUID(uuidString: "D0D3FA86-CA76-45EC-9BD9-6AF4F6B19149")!, major: 14, minor: 2, identifier: "Table14"))
-        print(self.beaconManager.monitoredRegions)
+//        print(self.beaconManager.monitoredRegions)
 
         UIApplication.shared.registerUserNotificationSettings(UIUserNotificationSettings(types: .alert, categories: nil))
         return true
