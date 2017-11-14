@@ -17,7 +17,7 @@
 		9FC10EC51F7904AE00B4C566 /* MonitorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC10EC41F7904AE00B4C566 /* MonitorUITests.swift */; };
 		9FCB94101F94E7150086432E /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCB940F1F94E7150086432E /* EmailViewController.swift */; };
 		9FCC3AE41F9E0D8C006999B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC3AE31F9E0D8C006999B3 /* Assets.xcassets */; };
-		C9DCDD0B5E5D70D89B03CDE0 /* Pods_Monitor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A8AC87E828DFFC9082B7404 /* Pods_Monitor.framework */; };
+		C9DCDD0B5E5D70D89B03CDE0 /* Pods_Monitor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A8AC87E828DFFC9082B7404 /* Pods_Monitor.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -527,6 +527,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SPE48VCVKY;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/EstimoteSDK/EstimoteSDK\"",
@@ -719,6 +720,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SPE48VCVKY;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/EstimoteSDK/EstimoteSDK\"",
@@ -773,6 +775,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SPE48VCVKY;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/EstimoteSDK/EstimoteSDK\"",

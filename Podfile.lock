@@ -5,7 +5,7 @@ PODS:
   - Bolts/AppLinks (1.8.4):
     - Bolts/Tasks
   - Bolts/Tasks (1.8.4)
-  - EstimoteSDK (4.26.2)
+  - EstimoteSDK (4.26.3)
   - FacebookCore (0.3.0):
     - Bolts (~> 1.8)
     - FBSDKCoreKit (~> 4.27)
@@ -85,7 +85,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
-  EstimoteSDK: 0b2954048f96d7f27f59d6e125e57fa4fe75b08f
+  EstimoteSDK: 1e99788bd58f86e80ba4d78deadfdf3535224abd
   FacebookCore: 3ffa190a3f1f96cec0e44d3fc221bc322c595ffa
   FacebookLogin: 0af839ea858faef99550d16596b87b4a8e8906e6
   FBSDKCoreKit: ca961e279113f691fd83dc634c0bbad9d4e3f370

@@ -65,7 +65,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate,
                 number = number+1
                 self.ref.child("/table/\(region.major!)/taken").setValue(number)
                 if let user = Auth.auth().currentUser {
-                    self.ref.child("/users/\(user.uid)/table").setValue("\(region.identifier)")
+                    self.ref.child("/users/\(user.uid)/table").setValue(region.major)
                     let notification = UILocalNotification()
                     notification.alertBody =
                     "歡迎光臨,\(user.displayName!)先生/小姐\n您正坐在\(region.identifier)"
@@ -89,7 +89,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate,
                 number = number-1
                 self.ref.child("/table/\(region.major!)/taken").setValue(number)
                 if let user = Auth.auth().currentUser {
-                    self.ref.child("/users/\(user.uid)/table").setValue("null")
+                    self.ref.child("/users/\(user.uid)/table").setValue(0)
                     let notification = UILocalNotification()
                     notification.alertBody =
                     "Goodbye,\(user.displayName!)先生/小姐\n期待您的再次光臨"
