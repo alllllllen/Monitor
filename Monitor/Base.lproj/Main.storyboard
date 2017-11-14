@@ -32,10 +32,10 @@
                                     <action selector="didTapSignIn:" destination="ohq-AI-rR5" eventType="touchUpInside" id="kWl-t3-X41"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyg-LG-xbK">
-                                <rect key="frame" x="15" y="124" width="290" height="120"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyg-LG-xbK">
+                                <rect key="frame" x="160" y="124" width="0.0" height="120"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="290" id="REc-RG-Bg6"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="290" id="REc-RG-Bg6"/>
                                     <constraint firstAttribute="height" constant="120" id="tMP-dM-aVv"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -61,7 +61,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n82-hr-7rC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-94" y="-515"/>
+            <point key="canvasLocation" x="-95.625" y="-515.49295774647885"/>
         </scene>
         <!--home-->
         <scene sceneID="aqp-no-M6e">
@@ -95,7 +95,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="本App為背景程式 現在您可以按home鍵離開本程式享受美好的午後時光" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XB8-k5-c9D">
                                 <rect key="frame" x="10" y="244" width="300" height="80"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="CzM-vQ-d75"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="CzM-vQ-d75"/>
                                     <constraint firstAttribute="height" constant="80" id="dDb-YJ-n9o"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -222,7 +222,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="hms-7L-mhC"/>
+        <segue reference="5xw-Bi-Clj"/>
         <segue reference="1vz-Wm-Knc"/>
     </inferredMetricsTieBreakers>
 </document>
