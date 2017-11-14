@@ -38,27 +38,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate,
         self.beaconManager.startMonitoring(for: CLBeaconRegion(proximityUUID: UUID(uuidString: "D0D3FA86-CA76-45EC-9BD9-6AF4F6B19150")!, major: 2, minor: 1, identifier: "Table2"))
         self.beaconManager.startMonitoring(for: CLBeaconRegion(proximityUUID: UUID(uuidString: "D0D3FA86-CA76-45EC-9BD9-6AF4F6B19150")!, major: 3, minor: 1, identifier: "Table3"))
         self.beaconManager.startMonitoring(for: CLBeaconRegion(proximityUUID: UUID(uuidString: "D0D3FA86-CA76-45EC-9BD9-6AF4F6B19150")!, major: 4, minor: 1, identifier: "Table4"))
-        
+
         self.beaconManager.startMonitoring(for: CLBeaconRegion(proximityUUID: UUID(uuidString: "D0D3FA86-CA76-45EC-9BD9-6AF4F6B19150")!, major: 5, minor: 1, identifier: "Table5"))
         self.beaconManager.startMonitoring(for: CLBeaconRegion(proximityUUID: UUID(uuidString: "D0D3FA86-CA76-45EC-9BD9-6AF4F6B19150")!, major: 6, minor: 1, identifier: "Table6"))
-        
+
         self.beaconManager.startMonitoring(for: CLBeaconRegion(proximityUUID: UUID(uuidString: "D0D3FA86-CA76-45EC-9BD9-6AF4F6B19150")!, major: 7, minor: 2, identifier: "Table7"))
-        
+
         self.beaconManager.startMonitoring(for: CLBeaconRegion(proximityUUID: UUID(uuidString: "D0D3FA86-CA76-45EC-9BD9-6AF4F6B19150")!, major: 8, minor: 2, identifier: "Table8"))
         self.beaconManager.startMonitoring(for: CLBeaconRegion(proximityUUID: UUID(uuidString: "D0D3FA86-CA76-45EC-9BD9-6AF4F6B19150")!, major: 9, minor: 2, identifier: "Table9"))
         self.beaconManager.startMonitoring(for: CLBeaconRegion(proximityUUID: UUID(uuidString: "D0D3FA86-CA76-45EC-9BD9-6AF4F6B19150")!, major: 10, minor: 2, identifier:"Table10"))
         self.beaconManager.startMonitoring(for: CLBeaconRegion(proximityUUID: UUID(uuidString: "D0D3FA86-CA76-45EC-9BD9-6AF4F6B19150")!, major: 11, minor: 2, identifier:"Table11"))
-        
+
         self.beaconManager.startMonitoring(for: CLBeaconRegion(proximityUUID: UUID(uuidString: "D0D3FA86-CA76-45EC-9BD9-6AF4F6B19150")!, major: 12, minor: 2, identifier:"Table12"))
         self.beaconManager.startMonitoring(for: CLBeaconRegion(proximityUUID: UUID(uuidString: "D0D3FA86-CA76-45EC-9BD9-6AF4F6B19150")!, major: 13, minor: 2, identifier:"Table13"))
-        
+
         self.beaconManager.startMonitoring(for: CLBeaconRegion(proximityUUID: UUID(uuidString: "D0D3FA86-CA76-45EC-9BD9-6AF4F6B19150")!, major: 14, minor: 2, identifier:"Table14"))
         self.beaconManager.startMonitoring(for: CLBeaconRegion(proximityUUID: UUID(uuidString: "D0D3FA86-CA76-45EC-9BD9-6AF4F6B19150")!, major: 15, minor: 2, identifier:"Table15"))
         self.beaconManager.startMonitoring(for: CLBeaconRegion(proximityUUID: UUID(uuidString: "D0D3FA86-CA76-45EC-9BD9-6AF4F6B19150")!, major: 16, minor: 2, identifier:"Table16"))
         self.beaconManager.startMonitoring(for: CLBeaconRegion(proximityUUID: UUID(uuidString: "D0D3FA86-CA76-45EC-9BD9-6AF4F6B19150")!, major: 17, minor: 2, identifier:"Table17"))
         self.beaconManager.startMonitoring(for: CLBeaconRegion(proximityUUID: UUID(uuidString: "D0D3FA86-CA76-45EC-9BD9-6AF4F6B19150")!, major: 18, minor: 2, identifier:"Table18"))
-        
-        //print(self.beaconManager.monitoredRegions)
+//
+//        print(self.beaconManager.monitoredRegions)
 
         UIApplication.shared.registerUserNotificationSettings(UIUserNotificationSettings(types: .alert, categories: nil))
         return true
