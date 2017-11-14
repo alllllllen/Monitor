@@ -34,7 +34,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>3</string>
+	<string>4</string>
 	<key>FacebookAppID</key>
 	<string>153756685172116</string>
 	<key>FacebookDisplayName</key>
@@ -48,12 +48,14 @@
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>Use it for IBeacon scan</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>We&apos;ll show you cool things near you in the app. With the &quot;always&quot; option, we can also alert you via notifications if you don&apos;t have the app open.</string>
+	<string>We'll show you cool things near you in the app. With the "always" option, we can also alert you via notifications if you don't have the app open.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>We&apos;ll show you cool things near you in the app, and alert you via notifications if you don&apos;t have the app open.</string>
+	<string>We'll show you cool things near you in the app, and alert you via notifications if you don't have the app open.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>We&apos;ll show you cool things near you in the app.</string>
+	<string>We'll show you cool things near you in the app.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>bluetooth-central</string>
@@ -72,8 +74,6 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
-	<key>NSBluetoothPeripheralUsageDescription</key>
-	<string>Use it for IBeacon scan</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
