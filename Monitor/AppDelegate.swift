@@ -87,7 +87,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate,
             let value = datasnap.value as? NSDictionary
             var number = value?["taken"] as! NSInteger
             if let user = Auth.auth().currentUser {
-                self.ref.child("/users/\(user.uid))").observeSingleEvent(of: .value, with: { (usersnap) in
+                self.ref.child("/users/\(user.uid)").observeSingleEvent(of: .value, with: { (usersnap) in
                     let userdata = usersnap.value as? NSDictionary
                     let tablenumber = userdata?["table"] as? NSInteger ?? 0
                     if (((number-1) >= 0) && ((tablenumber == region.major as! NSInteger))) {
